@@ -4,7 +4,10 @@ const app = express();
 app.set('view engine', 'hbs');
  
 app.get('/', function (req, res) {
-  res.send('<h1>Hello cccWorld</h1>');
+  res.render("index", {
+      title: "Home",
+      name: "Riyana"
+  });
 })
  
 app.get('/about', function (req, res) {
